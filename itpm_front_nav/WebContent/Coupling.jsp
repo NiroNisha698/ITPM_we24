@@ -1,9 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
 <head>
+<link rel="stylesheet" type="text/css" href="couple.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+
 <style>
 
 /*
@@ -283,9 +285,10 @@ p {margin: 6px; padding: 4px;}
 }
 
 
-
 </style>
-<title>Code Complexity Measuring Tool</title>
+<meta charset="ISO-8859-1">
+<title>Calculate Code Complexity for Coupling</title>
+
 </head>
 <body>
 <ul class="menu cf">
@@ -305,48 +308,23 @@ p {margin: 6px; padding: 4px;}
 <br><br>
 <br>
 <br>
+<button onclick="myFunction()">Toggle dark mode</button>
 
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
 
-<div class="main-content">
-  <!--1 Column Content-->
-  <div class="span-full">
-    <ul class="ca-menu">
-      <li>
-        <a href="#">
-          <span class="ca-icon">G</span>
-          <div class="ca-content">
-            <h1 class="ca-main">Generate Report</h1>
-            <h2 class="ca-sub">pdf</h2>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="ca-icon">D</span>
-          <div class="ca-content">
-            <h1 class="ca-main">Display All</h1>
-            <h2 class="ca-sub">Tables</h2>
-          </div>
-        </a>
-      </li>
-     
-    </ul>
-  </div>
-  
-  
-  
-  
-  
-  
-  <br>
-  
-  
-  
-  
-  
-<div id="footer">
-
-<p>A product of Salt & Pepper !!!</p>
+<div>
+<h3>Calculate Complexity of Coupling</h3>
+<form action="/action_page.php">
+  <label for="myfile">Choose files:</label><br>
+  <input type="file" id="myfile" name="myfile" multiple><br><br>
+  <input type="submit" class="button" value="Submit">
+</form>
 </div>
+
 </body>
 </html>
